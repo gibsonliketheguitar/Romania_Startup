@@ -1,8 +1,9 @@
-import ITag from '../../types/interface/Tag'
+import ITag from "../../types/interface/Tag";
 
 export const Tag = ({ title }: ITag) => {
-    return (
-        <div className='text-base'>{title}</div>
-    )
-}
-
+  return (
+    <div className="mt-3 text-base rounded-full bg-gray-200 px-5 py-2">
+      {title}
+    </div>
+  );
+};

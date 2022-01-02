@@ -1,5 +1,2 @@
-export const DropPin = () => {
-    return (
-        <div>DropPin</div>
-    )
-}
+import { MdLocationOn } from "react-icons/md";
+export const DropPin = () => <MdLocationOn />;

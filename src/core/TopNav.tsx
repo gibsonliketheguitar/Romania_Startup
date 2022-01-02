@@ -1,27 +1,29 @@
+import Button from "./Button/Button";
+
 export default function TopNav() {
-    return (
-        <nav className="flex flex-row items-between">
-            <HomeAction />
-            <Authentication />
-        </nav>
-    )
+  return (
+    <div className="border-b-2 py-3 w-full flex flex-row h-16 justify-between items-center">
+      <HomeAction />
+      <Authentication />
+    </div>
+  );
 }
 
 const HomeAction = () => {
-    return (
-        <div>
-            <span>Logo</span>
-            <span>MULTIDOM</span>
-            <span>Mesteri</span>
-        </div>
-    )
-}
+  return (
+    <div className="ml-4 flex space-x-4">
+      <span className="h-8 w-8">Logo</span>
+      <span>MULTIDOM</span>
+      <span>Mesteri</span>
+    </div>
+  );
+};
 
 const Authentication = () => {
-    return (
-        <div className='flex flex-row'>
-            <button> Autentificare</button>
-            <button> Inregistrare</button>
-        </div>
-    )
-}
+  return (
+    <div className="mr-8 flex space-x-6">
+      <Button title="Autentificare" variant="text" />
+      <Button title="Inregistrare" />
+    </div>
+  );
+};

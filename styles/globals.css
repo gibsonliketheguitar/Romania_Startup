@@ -18,3 +18,20 @@ a {
 * {
   box-sizing: border-box;
 } */
+
+@layer components {
+  .btn-base {
+    @apply flex h-12 w-auto justify-center items-center rounded shadow-md text-center text-base;
+  }
+  .btn-default {
+    @apply bg-black text-white;
+  }
+
+  .btn-outlined {
+    @apply outline outline-1 outline-black shadow-none rounded-sm text-black;
+  }
+
+  .btn-text {
+    @apply shadow-none text-black;
+  }
+}
