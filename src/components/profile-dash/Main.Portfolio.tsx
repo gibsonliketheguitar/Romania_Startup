@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Portfolio() {
     const arr = [1, 2, 3, 4, 5, 6,]
@@ -14,11 +15,13 @@ export default function Portfolio() {
 
 const PortfolioImage = () => {
     return (
-        <Image
-            className='rounded'
-            src='https://picsum.photos/200'
-            height={169}
-            width={169}
-        />
+        <Link href='/project'>
+            <Image
+                className='rounded'
+                src='https://picsum.photos/200'
+                height={169}
+                width={169}
+            />
+        </Link>
     )
 }

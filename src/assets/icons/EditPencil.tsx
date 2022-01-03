@@ -1,2 +1,2 @@
 import { RiPencilFill } from 'react-icons/ri'
-const EditPencil = () => <RiPencilFill />
+export const EditPencil = () => <RiPencilFill />
