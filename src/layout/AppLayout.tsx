@@ -1,5 +1,6 @@
 import CopyRight from "@/core/CopyRight";
-import TopNav from "../core/TopNav";
+import TopNav from "@/core/TopNav";
+import { IProps } from "@/types/interface/Props";
 
 export default function AppLayout({ children }: IProps) {
   return (
