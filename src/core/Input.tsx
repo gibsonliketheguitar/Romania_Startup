@@ -2,8 +2,8 @@ import { SetStateAction } from "react"
 
 interface IInput {
     title?: string,
-    value: string,
-    setValue: (e: any) => React.Dispatch<SetStateAction<string | undefined>>
+    value: string | undefined,
+    setValue: (value: string | undefined) => void
 }
 
 //TODO FIX THE CHECKBOX

@@ -1,4 +1,4 @@
-import { Clipboard } from "@/assets/icons/ClipBoard"
+import { Clipboard } from "@/assets/icons/Clipboard"
 import { Euro } from "@/assets/icons/Euro"
 import { People } from "@/assets/icons/People"
 

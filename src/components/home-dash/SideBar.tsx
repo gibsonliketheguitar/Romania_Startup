@@ -17,7 +17,7 @@ export default function SideBar() {
 }
 
 const Service = () => {
-  const [filter, setFilter] = useState<string>("");
+  const [filter, setFilter] = useState<string | undefined>("");
   return (
     <div className="flex flex-col">
       <div className="flex flex-row justify-between">
@@ -40,7 +40,7 @@ const ClearFilter = () => {
 };
 
 const Location = () => {
-  const [location, setLocation] = useState();
+  const [location, setLocation] = useState<string | undefined>("");
   return (
     <div className="mt-10 flex flex-col">
       <span className='mt-4'>
