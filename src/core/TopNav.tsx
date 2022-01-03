@@ -1,8 +1,8 @@
-import Button from "./Button/Button";
+import Button from "./Button";
 
 export default function TopNav() {
   return (
-    <div className="border-b-2 py-3 w-full flex flex-row h-16 justify-between items-center">
+    <div className="border-b-2 py-3 w-full flex flex-row h-16 justify-between items-center bg-white">
       <HomeAction />
       <Authentication />
     </div>

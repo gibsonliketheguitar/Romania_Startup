@@ -4,11 +4,14 @@ interface IProfileLayout {
     right: JSX.Element,
 }
 
-export default function ProfileLayout({ left, right }: IProfileLayout) {
+export default function ProfileLayout({ top, left, right }: IProfileLayout) {
     return (
-        <div className='flex flex-row'>
-            <section className="basis-1/4">{left}</section>
-            <main className="basis-3/4">{right}</main>
+        <div className='flex flex-col items-center'>
+            <header>{top}</header>
+            <div className='flex flex-row justify-between items-start w-full'>
+                <main>{left}</main>
+                <section>{right}</section>
+            </div>
         </div>
     )
 }

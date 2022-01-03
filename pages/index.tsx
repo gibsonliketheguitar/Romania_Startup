@@ -1,12 +1,10 @@
 import type { NextPage } from "next";
-import Link from "next/link";
+import HomeLayout from "../src/layout/HomeLayout";
+import { default as Main } from "../src/components/home-dash/Main";
+import { default as SideBar } from "../src/components/home-dash/SideBar";
 
 const Home: NextPage = () => {
-  return (
-    <Link href="/home">
-      <a>Home</a>
-    </Link>
-  );
+  return <HomeLayout left={<SideBar />} right={<Main />} />;
 };
 
 export default Home;

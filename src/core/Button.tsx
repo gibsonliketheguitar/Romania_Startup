@@ -11,10 +11,13 @@ export default function Button({
   title,
   height,
   width,
+  icon
 }: IButton) {
+  const hasIcon = Boolean(icon)
   return (
     <div className={`btn-base ${Btn[variant]} ${height} ${width}`}>
-      <span className="px-6 py-2.5">{title}</span>
+      <span className={`${hasIcon ? '' : 'hidden'}`}>{icon}</span>
+      <span className="">{title}</span>
     </div>
   );
 }

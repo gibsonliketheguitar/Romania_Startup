@@ -1,4 +1,4 @@
-import Button from "../../core/Button/Button";
+import Button from "../../core/Button";
 import DisplayStats from "./Main.DisplayStats";
 import Header from "./Main.Header";
 import ProfileList from "./Main.ProfileList";
