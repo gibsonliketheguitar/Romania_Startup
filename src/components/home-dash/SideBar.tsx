@@ -1,3 +1,7 @@
+import { ArrowDown } from "@/assets/icons/ArrowDown";
+import { ArrowUp } from "@/assets/icons/ArrowUp";
+import { CloseSquare } from "@/assets/icons/CloseSquare";
+import Input from "@/core/Input";
 import { useState } from "react";
 import Checkbox from "../../core/Checkbox";
 
@@ -16,10 +20,11 @@ const Service = () => {
   const [filter, setFilter] = useState<string>("");
   return (
     <div className="flex flex-col">
-      <div className="flex flex-row space-btween">
+      <div className="flex flex-row justify-between">
         <span className="text-base">Caută dupa serviciu</span>
         <ClearFilter />
       </div>
+      <Input value={filter} setValue={setFilter} />
     </div>
   );
 };
@@ -27,9 +32,9 @@ const Service = () => {
 const ClearFilter = () => {
   const handleOnClick = () => console.log("clear filter");
   return (
-    <div className="flex-row" onClick={handleOnClick}>
-      <span>x</span>
-      <span>Sterge filtre</span>
+    <div className="flex items-center" onClick={handleOnClick}>
+      <CloseSquare />
+      <span className="ml-1 text-cyan-700 text-base">Sterge filtre</span>
     </div>
   );
 };
@@ -38,8 +43,9 @@ const Location = () => {
   const [location, setLocation] = useState();
   return (
     <div className="mt-10 flex flex-col">
-      <div>Location</div>
-      <input />
+      <span className='mt-4'>
+        <Input title={'Location'} value={location} setValue={setLocation} />
+      </span>
     </div>
   );
 };
@@ -52,14 +58,12 @@ const SectionOne = () => {
       <div className="mt-4 flex flex-row justify-between items-center">
         <span className="text-base bold">Entitate</span>
         <span onClick={() => setIsVisible((state: Boolean) => !state)}>
-          {" "}
-          up arrow{" "}
+          {isVisible ? <ArrowUp /> : <ArrowDown />}
         </span>
       </div>
       <div
-        className={`my-3 flex justify-between items-center ${
-          isVisible ? "" : "hidden"
-        }`}
+        className={`my-3 flex justify-between items-center ${isVisible ? "" : "hidden"
+          }`}
       >
         {checkboxs.map((cb: string, index: number) => (
           <Checkbox key={index + cb} title={cb} />
@@ -83,13 +87,12 @@ const SectionTwo = () => {
       <div className="my-4 flex flex-row justify-between items-center">
         <span className="text-base">Entitate</span>
         <span onClick={() => setIsVisible((state: Boolean) => !state)}>
-          up arrow
+          {isVisible ? <ArrowUp /> : <ArrowDown />}
         </span>
       </div>
       <div
-        className={`flex flex-col space-y-2.5 justify-center items-start ${
-          isVisible ? "" : "hidden"
-        } `}
+        className={`flex flex-col space-y-2.5 justify-center items-start ${isVisible ? "" : "hidden"
+          } `}
       >
         {checkboxs.map((cb: string, index: number) => (
           <Checkbox key={index + cb} title={cb} />
